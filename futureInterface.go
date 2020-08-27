@@ -10,4 +10,5 @@ type Future Interface{
      isDone() bool
      isCancelled() bool
      cancel(mayInterruptIfRunning bool)
+     setException(exception exception)
 }
