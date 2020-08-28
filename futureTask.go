@@ -15,11 +15,11 @@ type Result struct{
 
 
 type FutureTask struct{
-     success bool
-     done bool
-     exception Exception
-     interfaceChannel chan Result
-     result Result
+     success bool                 // returns true on success of asynchronous task
+     done bool                    // returns true when execution of asynchronous task is complete
+     exception Exception          // returns exception (if occured) during the execution
+     interfaceChannel chan Result // returns a channel to wait for the result
+     result Result                // returns the result object
 }
 
 func (futureTask *FutureTask) get() Result{
