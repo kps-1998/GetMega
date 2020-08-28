@@ -18,6 +18,7 @@ type FutureTask struct{
      success bool
      done bool
      exception Exception
+     interfaceChannel chan Result
      result Result
 }
 
